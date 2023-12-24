@@ -8,6 +8,7 @@ from torch.utils.data import DataLoader, RandomSampler
 from torchvision import transforms
 from tqdm import tqdm
 
+from src.core.data_models import MLFlowConfig
 from src.model.base import TorchModel, get_device, train_model
 
 
@@ -42,6 +43,7 @@ class CatDogClassificationModel(TorchModel):
         self,
         train_dataset_path: str | Path,
         val_dataset_path: str | Path,
+        mlflow_config: MLFlowConfig,
         sample_size: int | None = None,
         batch_size: int = 256,
         n_epochs: int = 10,
@@ -69,7 +71,14 @@ class CatDogClassificationModel(TorchModel):
         val_loader = DataLoader(val_dataset, batch_size=batch_size, pin_memory=True, num_workers=2)
 
         self.model = train_model(
-            self.model, optimizer, train_loader, val_loader, n_epochs, cpt_path=cpt_path, device=device
+            self.model,
+            optimizer,
+            train_loader,
+            val_loader,
+            n_epochs,
+            mlflow_config=mlflow_config,
+            cpt_path=cpt_path,
+            device=device,
         )
 
         return self.model

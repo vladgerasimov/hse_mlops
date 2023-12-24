@@ -2,7 +2,6 @@ import hydra
 from dvc.api import DVCFileSystem
 from loguru import logger
 from pathlib import Path
-from omegaconf import DictConfig
 
 from src.model.cat_dog_cls_model import CatDogClassificationModel
 from src.core.data_models import AppConfig
@@ -32,6 +31,7 @@ def train_model(config: AppConfig):
     model.fit(
         train_dataset_path=train_data_path,
         val_dataset_path=val_data_path,
+        mlflow_config=config.mlflow,
         device=config.model_training.device,
         sample_size=config.dataset.train_sample,
         batch_size=config.dataset.batch_size,

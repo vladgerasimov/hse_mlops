@@ -18,7 +18,7 @@ class DatasetConfig:
 class ModelTrainingConfig:
     n_epochs: int
     learning_rate: float
-    device: str
+    device: str | None
     cpt_path: str
 
 
@@ -29,7 +29,8 @@ class ModelInferenceConfig:
 
 @dataclass
 class MLFlowConfig:
-    address: str
+    url: str
+    experiment_name: str
 
 
 @dataclass
