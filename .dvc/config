@@ -1,0 +1,7 @@
+[core]
+    remote = storage
+['remote "storage"']
+    url = s3://hse-bucket
+    endpointurl = https://storage.yandexcloud.net
+    access_key_id = YCAJE3B_y20VaeNFLd6ABp3IV
+    secret_access_key = YCNpg7K9vPbbHPPvcnp8f8GK3MVHXM_l0MuSTdXu

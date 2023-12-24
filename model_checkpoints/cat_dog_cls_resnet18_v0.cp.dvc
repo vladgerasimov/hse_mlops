@@ -1,0 +1,5 @@
+outs:
+- md5: 03b7ca0f928e76647517c631579c7c9d
+  size: 44799794
+  hash: md5
+  path: cat_dog_cls_resnet18_v0.cp
