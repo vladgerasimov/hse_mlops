@@ -16,5 +16,5 @@ model_training:
 model_inference:
   pred_path: pred.csv
 mlflow:
-  url: http://128.0.1.1:8080
-  experiment_name: dog_cat_classification_gerasimov
+  url: http://127.0.0.1:8080
+  experiment_name: dog_cat_classification
