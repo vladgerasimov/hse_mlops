@@ -11,7 +11,7 @@ from sklearn.metrics import accuracy_score, f1_score
 from torch.utils.data import DataLoader, Dataset
 from tqdm import tqdm
 
-from src.core.data_models import MLFlowConfig
+from classification_project.core.data_models import MLFlowConfig
 
 
 def get_commit_hash():
