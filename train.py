@@ -3,8 +3,8 @@ from dvc.api import DVCFileSystem
 from loguru import logger
 from pathlib import Path
 
-from src.model.cat_dog_cls_model import CatDogClassificationModel
-from src.core.data_models import AppConfig
+from classification_project.model.cat_dog_cls_model import CatDogClassificationModel
+from classification_project.core.data_models import AppConfig
 
 
 @hydra.main(version_base=None, config_path="configs", config_name="app_config")

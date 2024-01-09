@@ -8,8 +8,8 @@ from torch.utils.data import DataLoader, RandomSampler
 from torchvision import transforms
 from tqdm import tqdm
 
-from src.core.data_models import MLFlowConfig
-from src.model.base import TorchModel, get_device, train_model
+from classification_project.core.data_models import MLFlowConfig
+from classification_project.model.base import TorchModel, get_device, train_model
 
 
 class CatDogClassificationModel(TorchModel):
